@@ -22,13 +22,15 @@ const DAYS = [
   'SAT'
 ]
 
+const d = new Date()
+
 //아래에 있는 변수 2개는 달력 날짜 클릭이나 prev next 월 변경으로 인해 값이 바뀔 것이다.
-let displayDayIndex = new Date().getDay()
-let displayDate = new Date().getDate()
+let displayDayIndex = d.getDay()
+let displayDate = d.getDate()
 
 //아래에 있는 변수 2개를 기준 삼아서 drawCalendar 함수를 실행한다. 이 변수들은 달력 날짜 클릭으로 인해 값이 바뀔 것이다.
-let displayMonthIndex = new Date().getMonth()
-let displayYear = new Date().getFullYear()
+let displayMonthIndex = d.getMonth()
+let displayYear = d.getFullYear()
 
 function drawCalendar() {
   const currentDay = document.querySelector('.current-day')
@@ -57,7 +59,7 @@ function drawCalendar() {
       newTd.textContent = i
       newTd.id = `${i}${tempDate.getDay()}` //changeDisplay함수 실행할 때 식별자로 활용
 
-      if (i === new Date().getDate() && displayMonthIndex === new Date().getMonth() && displayYear === new Date().getFullYear()) {
+      if (i === d.getDate() && displayMonthIndex === d.getMonth() && displayYear === d.getFullYear()) {
         newTd.classList.add('its-today') //오늘 날짜는 검은색 말고 다른 색으로 표시
       }
 
