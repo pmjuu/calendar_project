@@ -1,5 +1,5 @@
 # calendar_project
-[calendar project page](https://pmjuu.github.io/calendar_project)
+[calendar project page](https://pmjuu.github.io/pmjuu/calendar_project)
 
 ## 구현 기능
 1. 오늘의 현재 요일 표기
